@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChromeRHack</title>
+  <link href='https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Press+Start+2P|Vampiro+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Favicon Link -->
+  <link rel="icon" href="assets/logo.ico" type="image/x-icon">
+  <!-- You can also use PNG format -->
+  <!-- <link rel="icon" href="path/to/favicon.png" type="image/png"> -->
+  <!-- Or SVG format -->
+  <!-- <link rel="icon" href="path/to/favicon.svg" 
+</head>
+<body>
+  <!-- Header -->
+<header>
+  <div class="header-content">
+    <img src="assets/logo.ico" alt="ChromeRHack Logo"     class="header-logo" />
+    <h1 id="typewriter">ChromeRHack</h1>
+  </div>
+  <div class="header-links">
+    <a href="https://github.com/ChromeRHack">Github</a>
+    <a href="https://discord.com/">Discord</a>
+  </div>
+</header>
+
+
+  <!-- Background and Particles -->
+  <div class="page-bg"></div>
+  <div class="animation-wrapper">
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="page-wrapper">
+    <!-- Intro Card -->
+    <div class="intro-card tilt-card">
+ <h1 id="about-heading" style="display: none;"></h1>      <p>We are a team of chromebook exploiters who make exploits for enrolled students and (hopefully) a unenrollment exploit.</p>
+    </div>
+
+    <!-- Profile Cards -->
+    <div class="profile-container">
+      <div class="profile tilt-card">
+        <img src="assets/DEDChromebook.png" alt="DEDChromebook's profile picture" />
+        <h2>Dedchromebook (Owner)</h2>
+        <h3>I'm Dedchromebook! I'm 14 and am interested in Chromebooks and Programming.</h3>
+        <h3><a href="https://github.com/codeguy271">Github</a></h3>
+        <h3><a href="https://codeguy271.github.io">Website</a></h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Vanilla Tilt JS -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+  <script>
+    // Initialize Vanilla Tilt
+    VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+      max: 15,
+      speed: 1000,
+      glare: true,
+      "max-glare": 0.1,
+      reverse: true,
+      perspective: 1000,
+    });
+
+        function typeWriter(text, element, delay) {
+      let i = 0;
+      function type() {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, delay);
+        }
+      }
+      type();
+    }
+
+    window.onload = function() {
+      const aboutHeading = document.getElementById('about-heading');
+      aboutHeading.style.display = 'block'; // Show the heading
+      typeWriter('About ChromeRHack', aboutHeading, 200); // Type with a 100ms delay
+    };  
+
+       window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
+  </script>
+</body>
+</html>
