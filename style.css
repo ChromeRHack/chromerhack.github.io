@@ -157,7 +157,7 @@ body {
     }
 
     .profile {
-      background-color: #a0a3a8;
+      background-color: #2d2f54;
       padding: 20px;
       padding-top: 40px; /* Add padding at the top */
       border-radius: 8px;
@@ -185,6 +185,7 @@ body {
 
     .profile h3 {
       margin: 5px 0;
+      color: #a0a3a8;
       font-size: 17px;
     }
 
